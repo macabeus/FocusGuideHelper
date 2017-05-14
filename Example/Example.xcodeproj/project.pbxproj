@@ -12,6 +12,7 @@
 		894DA7EB1EC65B0C008D245D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894DA7EA1EC65B0C008D245D /* ViewController.swift */; };
 		894DA7EE1EC65B0C008D245D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894DA7EC1EC65B0C008D245D /* Main.storyboard */; };
 		894DA7F01EC65B0C008D245D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 894DA7EF1EC65B0C008D245D /* Assets.xcassets */; };
+		894DA8131EC8E89D008D245D /* ControllerManyButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894DA8121EC8E89D008D245D /* ControllerManyButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		894DA7ED1EC65B0C008D245D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		894DA7EF1EC65B0C008D245D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		894DA7F11EC65B0C008D245D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		894DA8121EC8E89D008D245D /* ControllerManyButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerManyButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			children = (
 				894DA7E81EC65B0C008D245D /* AppDelegate.swift */,
 				894DA7EA1EC65B0C008D245D /* ViewController.swift */,
+				894DA8121EC8E89D008D245D /* ControllerManyButtons.swift */,
 				894DA7EC1EC65B0C008D245D /* Main.storyboard */,
 				894DA7EF1EC65B0C008D245D /* Assets.xcassets */,
 				894DA7F11EC65B0C008D245D /* Info.plist */,
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				894DA7EB1EC65B0C008D245D /* ViewController.swift in Sources */,
+				894DA8131EC8E89D008D245D /* ControllerManyButtons.swift in Sources */,
 				894DA7E91EC65B0C008D245D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +373,7 @@
 				894DA7F61EC65B0C008D245D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

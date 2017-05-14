@@ -11,81 +11,50 @@ import FocusGuideHelper
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var button11: UIButton!
-    @IBOutlet weak var button31: UIButton!
-    @IBOutlet weak var button22: UIButton!
-    @IBOutlet weak var button13: UIButton!
-    @IBOutlet weak var button33: UIButton!
+    @IBOutlet weak var container11: UIView!
+    @IBOutlet weak var container12: UIView!
     let guideHelper = FocusGuideHelper()
-    var previusRow: Int?
+    let gradientLayer = CAGradientLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         guideHelper.addLinkByFocus(
-            from: button11,
-            to: button22,
+            from: container11,
+            to: container12,
             inPosition: .right
-        )
-        
-        guideHelper.addLinkByFocus(
-            from: button31,
-            to: button22,
-            inPosition: .right
-        )
-        
-        guideHelper.addLinkByFocus(
-            from: button22,
-            to: button11,
-            inPosition: .left,
-            activedWhen: { _ in
-                self.previusRow == 1
-            }
-        )
-        
-        guideHelper.addLinkByFocus(
-            from: button22,
-            to: button31,
-            inPosition: .left,
-            activedWhen: {  _ in
-                self.previusRow == 3
-            }
-        )
-        
-        guideHelper.addLinkByFocus(
-            from: button22,
-            to: button13,
-            inPosition: .right,
-            activedWhen: { _ in
-                self.previusRow == 1
-            }
-        )
-        
-        guideHelper.addLinkByFocus(
-            from: button22,
-            to: button33,
-            inPosition: .right,
-            activedWhen: { _ in
-                self.previusRow == 3
-            }
         )
 
         guideHelper.addLinkByFocus(
-            from: button33,
-            to: button22,
+            from: container12,
+            to: container11,
             inPosition: .left
         )
+        
+        addGradientToBackground()
     }
 
-    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+    func addGradientToBackground() {
+        self.view.backgroundColor = .white
         
-        if context.previouslyFocusedView == button11 || context.previouslyFocusedView == button13 {
-            previusRow = 1
-        } else if context.previouslyFocusedView == button22 {
-            previusRow = 2
-        } else {
-            previusRow = 3
-        }
+        gradientLayer.frame = self.view.bounds
+        
+        let color1 = #colorLiteral(red: 0.3294117647, green: 0.2117647059, blue: 0.3882352941, alpha: 1).cgColor
+        let color2 = #colorLiteral(red: 0.2823529412, green: 0.1921568627, blue: 0.3490196078, alpha: 1).cgColor
+        let color3 = #colorLiteral(red: 0.2705882353, green: 0.1921568627, blue: 0.3450980392, alpha: 1).cgColor
+        let color4 = #colorLiteral(red: 0.1411764706, green: 0.1529411765, blue: 0.2549019608, alpha: 1).cgColor
+        gradientLayer.colors = [color1, color2, color3, color4]
+        
+        gradientLayer.startPoint = CGPoint(x: 0.35, y: 0.25)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.6)
+        gradientLayer.zPosition = -1
+        
+        gradientLayer.locations = [0.0, 0.25, 0.75, 1.0]
+        
+        self.view.layer.addSublayer(gradientLayer)
+    }
+    
+    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
         
         guideHelper.updateFocus(in: context)
     }
