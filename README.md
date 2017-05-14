@@ -1,3 +1,7 @@
+[![Version](https://img.shields.io/cocoapods/v/FocusGuideHelper.svg?style=flat)](http://cocoapods.org/pods/FocusGuideHelper)
+[![License](https://img.shields.io/cocoapods/l/FocusGuideHelper.svg?style=flat)](http://cocoapods.org/pods/FocusGuideHelper)
+[![Platform](https://img.shields.io/cocoapods/p/FocusGuideHelper.svg?style=flat)](http://cocoapods.org/pods/FocusGuideHelper)
+
 # FocusGuideHelper
 ✨ Create focus guides linker more easily and versatile
 
