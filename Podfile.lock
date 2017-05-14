@@ -1,0 +1,16 @@
+PODS:
+  - FocusGuideHelper (0.1.0)
+
+DEPENDENCIES:
+  - FocusGuideHelper (from `.`)
+
+EXTERNAL SOURCES:
+  FocusGuideHelper:
+    :path: .
+
+SPEC CHECKSUMS:
+  FocusGuideHelper: 880b9ac2e888b974a9acbb74e950f736c7ca20eb
+
+PODFILE CHECKSUM: df772bc0cffe5e4d4e7d9cea8d5a8a7738e5cdce
+
+COCOAPODS: 1.2.0
