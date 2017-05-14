@@ -9,6 +9,8 @@
 
 You can download this repository and see this example app.
 
+🌼 Thanks to [@EdyJunior](https://github.com/EdyJunior)
+
 # How to use
 
 ## Install
