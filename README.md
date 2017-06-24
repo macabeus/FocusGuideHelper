@@ -133,3 +133,10 @@ guideHelper.addLinkByFocus(
 
 This focus is excluded when the `autoexcludeWhen` return true.<br>
 The `identifier` is optional.
+
+---
+
+**Maintainer**:
+
+> [macabeus](http://macalogs.com.br/) &nbsp;&middot;&nbsp;
+> GitHub [@macabeus](https://github.com/macabeus)
