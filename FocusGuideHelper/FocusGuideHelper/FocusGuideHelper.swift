@@ -65,7 +65,7 @@ public class FocusGuideHelper: NSObject {
         }
         
         // set constrains
-        if pos == .up || po == .down {
+        if pos == .up || pos == .down {
             focusGuide.centerXAnchor.constraint(equalTo: fromView.centerXAnchor).isActive = true
         } else {
             focusGuide.centerYAnchor.constraint(equalTo: fromView.centerYAnchor).isActive = true
