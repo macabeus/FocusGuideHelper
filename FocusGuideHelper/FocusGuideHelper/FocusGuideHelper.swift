@@ -65,8 +65,11 @@ public class FocusGuideHelper: NSObject {
         }
         
         // set constrains
-        focusGuide.centerYAnchor.constraint(equalTo: fromView.centerYAnchor).isActive = true
-        
+        if pos == .up || po == .down {
+            focusGuide.centerXAnchor.constraint(equalTo: fromView.centerXAnchor).isActive = true
+        } else {
+            focusGuide.centerYAnchor.constraint(equalTo: fromView.centerYAnchor).isActive = true
+        }
         // set element target
         focusGuide.preferredFocusEnvironments = [toView]
         
